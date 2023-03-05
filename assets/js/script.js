@@ -1,8 +1,8 @@
-// conteniner console del counter
+// contaniner console del counter
 let container = document.createElement("div");
 container.setAttribute("id", "container");
 
-//buttons conteiner
+//buttons container
 let buttonContainer = document.createElement("div");
 buttonContainer.setAttribute("id", "buttonContainer");
 
