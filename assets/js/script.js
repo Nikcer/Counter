@@ -9,10 +9,10 @@ function createElement (tagName, className, id, text ) {
 }
 
 //creazione elementi
-const container = createElement('div', 'container', 'container', '','');
+const container = createElement('div', 'container', 'container', '');
 document.body.appendChild(container);
 
-const buttonContainer = createElement('div', '', 'buttonContainer', '','');
+const buttonContainer = createElement('div', '', 'buttonContainer', '');
 container.appendChild(buttonContainer);
 
 const counter = createElement('h3', '', 'output', '0');
