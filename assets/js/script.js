@@ -1,57 +1,56 @@
-// contaniner console del counter
-let container = document.createElement("div");
-container.setAttribute("id", "container");
+//funzione per la creazione di elementi
+function createElement (tagName, className, id, text ) {
+    let element = document.createElement(tagName);
+    element.className = className;
+    element.id = id;
+    
+    element.innerHTML = text;
+    return element;
+}
 
-//buttons container
-let buttonContainer = document.createElement("div");
-buttonContainer.setAttribute("id", "buttonContainer");
+//creazione elementi
+const container = createElement('div', 'container', 'container', '','');
+document.body.appendChild(container);
 
-//visualizzazione valore iniziale
-let counter = document.createElement("h3");
-counter.innerHTML = 0;
-counter.setAttribute("id","output");
+const buttonContainer = createElement('div', '', 'buttonContainer', '','');
+container.appendChild(buttonContainer);
 
+const counter = createElement('h3', '', 'output', '0');
+container.appendChild(counter);
 
-
-// buttons
-let buttonMinus = document.createElement("button");
-buttonMinus.innerText = "-";
-let buttonReset = document.createElement("button");
-buttonReset.innerText = "RESET";
-let buttonPlus = document.createElement("button");
-buttonPlus.innerText = "+";
-
-
-// buttons aggiunti al div
+const buttonMinus = createElement('button',  'button', '', '-');
 buttonContainer.appendChild(buttonMinus);
+
+const buttonReset = createElement('button',  'button', '', 'reset');
 buttonContainer.appendChild(buttonReset);
+
+const buttonPlus = createElement('button',  'button', '', '+');
 buttonContainer.appendChild(buttonPlus);
 
 
-//append container al body della pagina
-document.body.appendChild(container);
-//append buttonContainer e counter al container 
-container.appendChild(buttonContainer);
-container.appendChild(counter);
 
- 
-// funzioni cambio valore del counter
-buttonMinus.addEventListener("click", subnum);
-    function subnum(){
-        counter.innerHTML= parseInt(counter.innerHTML) - 1;
 
-}
 
-buttonPlus.addEventListener("click", addnum);
+// funzione cambio valore del counter
+let counterVal = 0;
+
+
+container.addEventListener ('click', function(e) {
     
-        function addnum (){
-            counter.innerHTML= parseInt(counter.innerHTML) + 1;       
+        if (e.target.innerHTML === '-' && counterVal != 0) {
+            counterVal--;
+            counter.innerHTML = counterVal;
+        } else if (e.target.innerHTML === '+') {
+            counterVal++;
+        }
+        else  {
+            counterVal = 0;
+            
         }
 
 
-buttonReset.addEventListener("click", reset);
-        function reset (){
-            counter.innerHTML = 0;
-        }
-       
+
+            counter.innerHTML = counterVal;
+        
     
+});
