@@ -4,6 +4,9 @@ Web app che permette di incrementare o diminuire il valore del Counter. Il lingu
 Screenshots
 Alt text
 
+Logo
+![Logo](https://github.com/Nikcer/Counter/blob/dev/assets/images/favicon-counter.png)
+
 Authors
 @Nikcer
 Demo
