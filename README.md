@@ -3,9 +3,11 @@ Web app che permette di incrementare o diminuire il valore del Counter. Il lingu
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Alt text](https://github.com/Nikcer/Counter/blob/master/assets/images/counter-desktop.png)
+
 
 ![Logo](https://github.com/Nikcer/Counter/blob/dev/assets/images/logo.png)
+
 
 
 # Authors
